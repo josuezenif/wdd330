@@ -1,0 +1,16 @@
+main {
+    max-width: 1050px;
+}
+
+button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: rgb(19, 58, 116);
+    border: 1.3px solid black;
+    border-radius: 0.7em;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(37, 76, 135);
+}
