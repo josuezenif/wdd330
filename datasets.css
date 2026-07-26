@@ -1,0 +1,21 @@
+li[data-category="fruit"] {
+    background-color: lightyellow;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+li[data-category="vegetable"] {
+    background-color: lightgreen;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+li[data-category="dairy"] {
+    background-color: lightblue;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+li:hover {
+    cursor: pointer;
+}
