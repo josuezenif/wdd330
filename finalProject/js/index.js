@@ -28,7 +28,7 @@ apiFetch();
 
 function productTemplate(product) {
     const template = `
-    <a href="/finalProject/product=${product.id}">
+    <a href="/finalProject/product.html?id=${product.id}">
         <h2>${product.title}</h2>
         <img src="${product.image}" alt="Image of ${product.title}">
         <p>${product.description}</p>
