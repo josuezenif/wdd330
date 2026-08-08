@@ -2,6 +2,9 @@
 const cartSection = document.querySelector('#cartItems');
 const wishSection = document.querySelector('#wishList');
 
+const params = new URLSearchParams(window.location.search);
+const productId = params.get('id');
+
 function displayCartItems() {
     const cartList = JSON.parse(localStorage.getItem('cart')) || [];
     cartList.forEach(item => {
@@ -23,7 +26,7 @@ function cartTemplate(product) {
         <p class="info1">- Price: $${product.price}</p>
         <p class="info2">- Rating: ${product.rating.rate}/5 ⭐️</p>
     
-    <button id="remove" data-set="${product.id}" class="removeItem">X</button>
+    <button id="remove" data-id="${product.id}" class="removeItem">X</button>
 
     `;
 
@@ -46,12 +49,19 @@ function displayWishListItems() {
 displayWishListItems();
 
 // FUNCTIONS TO REMOVE ITEM FROM CART
-const removeButton = document.querySelector('#remove');
+const removeButtons = document.querySelectorAll('#remove');
 
-removeButton.addEventListener('click', () => {
-    // removeItem(productId);
-})
+removeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        removeItem(button.dataset.id);
+    });
+});
+
+
 
 function removeItem(productId) {
-    localStorage.removeItem()
+    const cartList = JSON.parse(localStorage.getItem('cart')) || [];
+    const newCart = cartList.filter(item => item.id !== productId);
+
+    localStorage.setItem('cart', JSON.stringify(newCart));
 }
