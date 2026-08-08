@@ -18,7 +18,7 @@ displayCartItems();
 
 function cartTemplate(product) {
     const template = `
-    <a href="/finalProject/product.html?id=${product.id}"><h2>${product.title}</h2></a>
+    <a href="/wdd330/finalProject/product.html?id=${product.id}"><h2>${product.title}</h2></a>
         <img src="${product.image}" alt="Image of ${product.title}">
         <p class="info1">- Price: $${product.price}</p>
         <p class="info2">- Rating: ${product.rating.rate}/5 ⭐️</p>
