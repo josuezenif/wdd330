@@ -19,6 +19,7 @@ function displayCartItems() {
         div.classList.add('cartProduct');
         div.innerHTML = template;
         cartSection.appendChild(div);
+        removeItemFromCart();
     });
 }
 
@@ -67,6 +68,7 @@ function displayWishListItems() {
         div.classList.add('cartProduct');
         div.innerHTML = template;
         wishSection.appendChild(div);
+        removeItemFromWishList();
     });
 }
 
