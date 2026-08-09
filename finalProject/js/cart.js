@@ -121,7 +121,7 @@ function removeWishItem(productId) {
 }
 
 
-// ---------------- adding TOTAL PRICE to the bottom of page ----------------
+// ---------------- adding TOTAL PRICE to the bottom of page and TOTAL COUNT ITEMS ----------------
 
 function displayTotalCost() {
     const totalPrice = document.querySelector('#totalPrice');
@@ -136,3 +136,11 @@ function displayTotalCost() {
 }
 
 displayTotalCost();
+
+function displayCountItems() {
+    const count = document.querySelector('#totalCount');
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    count.textContent = cartItems.length;
+}
+
+displayCountItems();
