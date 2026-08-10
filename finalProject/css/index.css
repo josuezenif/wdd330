@@ -457,6 +457,228 @@ footer {
     }
 }
 
+/* CHECKOUT HTML CSS */
+
+.checkout-form {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: var(--cream);
+    border-radius: 0.8em;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    font-family: Arial, sans-serif;
+}
+
+/* SECCIONES */
+.checkout-form>div {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border: 1px solid var(--earth-brown);
+    border-radius: 0.6em;
+    background-color: white;
+}
+
+/* TITULITOS OPCIONALES */
+.checkout-form .contact::before {
+    content: "Contact Info";
+}
+
+.checkout-form .address::before {
+    content: "Shipping Address";
+}
+
+.checkout-form .payment::before {
+    content: "Payment Details";
+}
+
+.checkout-form .contact::before,
+.checkout-form .address::before,
+.checkout-form .payment::before {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: var(--primary-red);
+}
+
+/* GRID PARA INPUTS */
+.contact,
+.address,
+.payment {
+    display: grid;
+    grid-template-columns: 40% 55%;
+    gap: 1em;
+}
+
+.first-name {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: center;
+}
+
+#firstName {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.last-name {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: center;
+}
+
+#lastName {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+/* ADDRESS INFORMATION */
+.streetAddress {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: center;
+}
+
+#address {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.cityName {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: center;
+}
+
+#city {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.stateName {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    align-self: center;
+}
+
+#state {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.zip {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    align-self: center;
+}
+
+#zip {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+/* CREDIT CARD INFO */
+.creditCard {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: center;
+}
+
+#credit-card {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.expDate {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: center;
+}
+
+#expire-date {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.cvc {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    align-self: center;
+}
+
+#sec-code {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+/* LABELS */
+label {
+    font-size: 0.9rem;
+    color: var(--earth-brown);
+    margin-bottom: 0.2em;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 0.6em;
+    border-radius: 0.4em;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+/* BOTÓN */
+.checkout-btn {
+    width: 100%;
+    padding: 1em;
+    background-color: var(--primary-red);
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0.6em;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* HOVER */
+.checkout-btn:hover {
+    background-color: #a10f1f;
+    transform: translateY(-2px);
+}
+
+.checkout-total {
+    font-size: 1.2em;
+    border-bottom: 1.5px solid black;
+    max-width: fit-content;
+}
+
+/* success message */
+.success-content {
+    text-align: center;
+    padding: 5em 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+
+    .contact,
+    .address,
+    .payment {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    label {
+        align-items: flex-start;
+    }
+
+    .address input#address,
+    .payment input#credit-card {
+        grid-column: 1 / 2;
+    }
+}
+
 /* Tablets */
 @media screen and (max-width: 900px) {
     .products-container {

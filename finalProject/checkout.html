@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/index.css">
 
     <script src="js/time.js" defer></script>
+    <script src="js/checkout.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,8 +36,52 @@
 
     <main>
         <h1>Checkout Payment</h1>
-        <h3>Total: <span id="totalPrice"></span></h3>
+        <p class="checkout-total">Total: <strong><span id="totalPrice"></span></strong></p>
 
+        <form action="success.html" for="checkout" name="checkout" id="checkout" class="checkout-form" method="post">
+            <div class="contact">
+                <label for="firstName" class="first-name">First name *</label>
+                <input type="text" name="firstName" id="firstName" required minlength="14">
+
+                <label for="lastName" class="last-name">Last Name *</label>
+                <input type="text" name="lastName" id="lastName" required>
+            </div>
+
+            <div class="address">
+                <!--------------- STREET ADDRESS ---------------->
+                <label for="address" class="streetAddress">Street Address *</label>
+                <input type="text" name="address" id="address" required>
+
+                <!--------------------- CITY  ------------------->
+                <label for="city" class="cityName">City *</label>
+                <input type="text" name="city" id="city" required>
+
+                <!--------------------- STATE ------------------->
+                <label for="state" class="stateName">State *</label>
+                <input type="text" name="state" id="state" required>
+
+                <!---------------------- ZIP CODE ---------------->
+                <label for="zip" class="zip">Zip Code *</label>
+                <input type="text" name="zip" id="zip" required>
+            </div>
+
+            <div class="payment">
+
+                <!------------------------ CREDIT CARD NUMBER -------------------->
+                <label for="credit-card" class="creditCard">Credit Card Number *</label>
+                <input type="text" name="credit-card" id="credit-card" required minlength="12">
+
+                <!------------------------ EXPIRE DATE -------------------->
+                <label for="expire-date" class="expDate">Expiration Date *</label>
+                <input type="text" name="expire-date" id="expire-date" required>
+
+                <!------------------------ SECURITY CODE -------------------->
+                <label for="sec-code" class="cvc">CVV number *</label>
+                <input type="text" name="sec-code" id="sec-code" required minlength="3" maxlength="3">
+            </div>
+
+            <button type="submit" class="checkout-btn" id="checkoutSubmit">Checkout Now!</button>
+        </form>
     </main>
 
     <footer>
