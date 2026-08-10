@@ -118,6 +118,14 @@ function removeWishItem(productId) {
 
     localStorage.setItem('wishList', JSON.stringify(newWishList));
     wishSection.innerHTML = "";
+    const totalPrice = document.querySelector('#totalPrice');
+    const count = document.querySelector('#totalCount');
+
+    count.textContent = "";
+    displayCountItems();
+
+    totalPrice.textContent = "";
+    displayTotalCost();
 }
 
 
