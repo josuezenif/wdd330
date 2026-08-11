@@ -1,5 +1,6 @@
 
-const url = "https://fakestoreapi.com/products";
+// const url = "https://fakestoreapi.com/products";
+const url = "https://josuezenif.github.io/wdd330/finalProject/json/products.json";
 
 async function apiFetch() {
     try {
