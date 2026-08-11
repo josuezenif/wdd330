@@ -78,6 +78,14 @@ header {
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -467,6 +475,16 @@ footer {
     border-radius: 0.8em;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     font-family: Arial, sans-serif;
+    transform: translateX(500px);
+    opacity: 0;
+    animation: slideIn 0.8s ease-in forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* SECCIONES */
@@ -675,22 +693,54 @@ input {
 
     .address input#address,
     .payment input#credit-card {
-        grid-column: 1 / 2;
+        grid-column: 1/2;
     }
 }
 
-/* Tablets */
+/* Tablets
 @media screen and (max-width: 900px) {
     .products-container {
         grid-template-columns: repeat(2, 1fr);
     }
-}
+} */
 
 
 /* Celulares */
 @media screen and (max-width: 32rem) {
-    .products-container {
-        grid-template-columns: 1fr;
+    header {
+        display: flex;
+        flex-direction: row;
+
+        .logo {
+            width: 20em;
+            height: auto;
+            align-self: center;
+        }
+
+        .name {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+    }
+
+    .products {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 8px;
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    .product-card {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .about-section {
@@ -707,5 +757,26 @@ input {
 
     .about-container p {
         font-size: 1rem;
+    }
+
+    /* cart product mobile */
+    .cartProduct {
+        gap: 0;
+    }
+
+    /* checkout form css */
+
+    .checkout-form {
+        padding: 10px;
+
+        .contact,
+        .address,
+        .payment {
+            padding-left: 5px;
+        }
+    }
+
+    .checkout-form input {
+        text-align: center;
     }
 }

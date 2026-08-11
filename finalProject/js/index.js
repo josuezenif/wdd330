@@ -31,7 +31,6 @@ function productTemplate(product) {
     <a href="/wdd330/finalProject/product.html?id=${product.id}">
         <h2>${product.title}</h2>
         <img src="${product.image}" alt="Image of ${product.title}">
-        <p>${product.description}</p>
         <p>Price: $${product.price}</p>
         <p>- Rating: ${product.rating.rate}/5 ⭐️</p>
         <p>- Over ${product.rating.count} solds!</p>

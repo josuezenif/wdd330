@@ -35,7 +35,7 @@
     </header>
 
     <main>
-        <h1>Checkout Payment</h1>
+        <h1 class="checkout-h1">Checkout Payment</h1>
         <p class="checkout-total">Total: <strong><span id="totalPrice"></span></strong></p>
 
         <form action="/wdd330/finalProject/success.html" for="checkout" name="checkout" id="checkout"
@@ -70,15 +70,16 @@
 
                 <!------------------------ CREDIT CARD NUMBER -------------------->
                 <label for="credit-card" class="creditCard">Credit Card Number *</label>
-                <input type="text" name="credit-card" id="credit-card" required minlength="12">
+                <input type="text" name="credit-card" id="credit-card" required minlength="12"
+                    placeholder="ex: 1234 1882 1982">
 
                 <!------------------------ EXPIRE DATE -------------------->
                 <label for="expire-date" class="expDate">Expiration Date *</label>
-                <input type="text" name="expire-date" id="expire-date" required>
+                <input type="text" name="expire-date" id="expire-date" required placeholder="month/year">
 
                 <!------------------------ SECURITY CODE -------------------->
                 <label for="sec-code" class="cvc">CVV number *</label>
-                <input type="text" name="sec-code" id="sec-code" required minlength="3" maxlength="3">
+                <input type="text" name="sec-code" id="sec-code" required minlength="3" maxlength="3" placeholder="123">
             </div>
 
             <button type="submit" class="checkout-btn" id="checkoutSubmit">Checkout Now!</button>
