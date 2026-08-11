@@ -2,7 +2,7 @@
 
 const params = new URLSearchParams(window.location.search);
 const productId = params.get('id');
-const apiUrl = "https://fakestoreapi.com/products";
+const apiUrl = "https://josuezenif.github.io/wdd330/finalProject/json/products.json";
 let currentProduct = null;
 
 async function getProductInfo() {
